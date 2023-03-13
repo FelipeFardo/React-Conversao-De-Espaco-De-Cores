@@ -1,0 +1,22 @@
+.container,
+.response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  margin-top: 50px;
+}
+
+form button {
+  margin-top: 20px;
+}
+
+input {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
