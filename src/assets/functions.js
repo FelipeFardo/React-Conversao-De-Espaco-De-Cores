@@ -156,5 +156,5 @@ const rgbToGray = (cor)=>{
     if (parseInt(aux[i])>255 || parseInt(aux[i])<0 || typeof(aux[i])!=='number') return 'Valor incorreto'
     else soma +=parseInt(aux[i]);
   }
-  return `${soma/3}`;
+  return `${Math.round(soma/3)}`;
 }
