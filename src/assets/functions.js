@@ -1,7 +1,7 @@
 export const convertColor = (typeColor, typeNewColor, cor)=>{
   if (typeColor==='RGB' && typeNewColor==='HSV') return rgbToHsv(cor);
   else if (typeColor==='RGB' && typeNewColor==='CMYK') return rgbToCmyk(cor);
-  else if (typeColor==='RGB' && typeNewColor==='Escala de cinza') return rgbToGray(cor);
+  else if (typeColor==='RGB' && typeNewColor==='Escala de Cinza') return rgbToGray(cor);
   else if(typeColor==='HSV' && typeNewColor==='RGB') return hsvToRgb(cor);
   else if (typeColor==='CMYK' && typeNewColor==='RGB') return cmykToRgb(cor);
 }

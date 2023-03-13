@@ -28,7 +28,7 @@ function App() {
                 <Route path="/hsvtorgb" element={<ConvertColor typeColor='HSV' typeNewColor='RGB'/>} />
                 <Route path="/rgbtocmyk" element={<ConvertColor typeColor='RGB' typeNewColor='CMYK'/>} />
                 <Route path="/cmyktorgb" element={<ConvertColor typeColor='CMYK' typeNewColor='RGB'/>} />
-                <Route path="/rgbtogray" element={<ConvertColor typeColor='RGB' typeNewColor='Escala de cinza'/>} />
+                <Route path="/rgbtogray" element={<ConvertColor typeColor='RGB' typeNewColor='Escala de Cinza'/>} />
               </Routes>
             </div>
           </GlobalContext.Provider>
