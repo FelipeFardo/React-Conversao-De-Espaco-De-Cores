@@ -12,7 +12,7 @@ const ConvertColor = ({ typeColor = '', typeNewColor = '' }) => {
     if (cor.length > 0) {
       setNewCor(convertColor(typeColor, typeNewColor, cor));
     }
-    if (cor.length === 0) {
+    else if (cor.length === 0) {
       setNewCor('');
     }
   }, [typeColor, typeNewColor, cor])
