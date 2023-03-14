@@ -19,7 +19,7 @@ const Navbar = () => {
             to="/rgbtohsv"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            RBG para HSV
+            RGB para HSV
           </NavLink>
         </li>
         <li>
