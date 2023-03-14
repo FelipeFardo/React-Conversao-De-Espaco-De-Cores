@@ -107,10 +107,14 @@ const rgbToCmyk = (cor)=>{
   auxB=B/255;
 
   K= 1-Math.max(auxR, auxG, auxB);
-  C = Math.round((1-auxR-K)/(1-K)*100);
-  M =  Math.round((1-auxG-K)/(1-K)*100);
-  Y = Math.round((1-auxB-K)/(1-K)*100);
+  if (K===1)C=M=Y=0;
+  else {
+    C = Math.round((1-auxR-K)/(1-K)*100);
+    M =  Math.round((1-auxG-K)/(1-K)*100);
+    Y = Math.round((1-auxB-K)/(1-K)*100);
+  }
   K= Math.round(K*100)
+  
   return `C = ${C}%, M = ${M}%, Y = ${Y}%, K = ${K}%`;
 }
 
