@@ -79,24 +79,13 @@ const rgbToHsv = (cor)=>{
   max = Math.max(auxR, auxG, auxB);
   min = Math.min(auxR, auxG, auxB);
   delta = max-min;
-  if (delta===0){
-    H=0;
-  }
-  else if (max === auxR && auxG>=auxB){ 
-    H = Math.round(60 * ((auxG-auxB)/delta)+ 0)
-  }
-  else if (max === auxR && auxG<auxB){
-    H = Math.round(60 * ((auxG-auxB)/delta) + 360)
-  }
-  else if (max===auxG){
-    H = Math.round(60 * ((auxB-auxR)/delta) + 120)
-  }
-  else if (max===auxB){
-    H = Math.round(60 * ((auxR-auxG)/delta) + 240)
-  }
-
-  if (max===0)S=0;
-  else S = Math.round((delta/max)*1000)/10;
+  if (delta===0)H=0;
+  else if (max === auxR && auxG>=auxB)H = Math.round(60 * ((auxG-auxB)/delta)+ 0)
+  else if (max === auxR && auxG<auxB)H = Math.round(60 * ((auxG-auxB)/delta) + 360)
+  else if (max===auxG)H = Math.round(60 * ((auxB-auxR)/delta) + 120)
+  else if (max===auxB)H = Math.round(60 * ((auxR-auxG)/delta) + 240)
+  
+  S = max===0 ?0 : Math.round((delta/max)*1000)/10;
   V = (max*100).toFixed(1);
   return `H = ${H}, S= ${S}%, G= ${V}%`;
 }
