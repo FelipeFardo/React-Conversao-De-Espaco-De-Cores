@@ -11,7 +11,7 @@ const Home = () => {
       <ul className={styles.links_list}>
         <li>
           <NavLink
-            to="/rbgtohsv"
+            to="/rgbtohsv"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
             RBG para HSV
@@ -43,7 +43,7 @@ const Home = () => {
         </li>
         <li>
           <NavLink
-            to="/rbgtogray"
+            to="/rgbtogray"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
             RGB para Escala de Cinza
